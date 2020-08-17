@@ -324,7 +324,9 @@ class MarkerPrinter:
                 chessboardSize[1] * squareLength + pageBorder[1] * 2) as surface:
                 context = cairo.Context(surface)
 
-                context.set_source_rgba(0.5, 0.5, 0.5, 1.0)
+                # context.set_source_rgba(0.5, 0.5, 0.5, 1.0)
+                # Raghav changed color from gray to white
+                context.set_source_rgba(1.0, 1.0, 1.0, 1.0)
                 context.rectangle(0, 0,
                     chessboardSize[0] * squareLength + pageBorder[0] * 2,
                     chessboardSize[1] * squareLength + pageBorder[1] * 2)
@@ -377,7 +379,9 @@ class MarkerPrinter:
             chessboardSize[1] * squareLength + pageBorder[1] * 2) as surface:
             context = cairo.Context(surface)
 
-            context.set_source_rgba(0.5, 0.5, 0.5, 1.0)
+            # context.set_source_rgba(0.5, 0.5, 0.5, 1.0)
+            # Raghav changed color from gray to white
+            context.set_source_rgba(1.0, 1.0, 1.0, 1.0)
             context.rectangle(0, 0,
                 chessboardSize[0] * squareLength + pageBorder[0] * 2,
                 chessboardSize[1] * squareLength + pageBorder[1] * 2)
@@ -424,7 +428,9 @@ class MarkerPrinter:
                         subChessboardSliceY[subYID+1] - subChessboardSliceY[subYID] + pageBorder[1] * 2) as surface:
                         context = cairo.Context(surface)
 
-                        context.set_source_rgba(0.5, 0.5, 0.5, 1.0)
+                        # context.set_source_rgba(0.5, 0.5, 0.5, 1.0)
+                        # Raghav changed color from gray to white
+                        context.set_source_rgba(1.0, 1.0, 1.0, 1.0)
                         context.rectangle(0, 0,
                             subChessboardSliceX[subXID+1] - subChessboardSliceX[subXID] + pageBorder[0] * 2,
                             subChessboardSliceY[subYID+1] - subChessboardSliceY[subYID] + pageBorder[1] * 2)
@@ -492,7 +498,9 @@ class MarkerPrinter:
                 markerLength + pageBorder[1] * 2) as surface:
                 context = cairo.Context(surface)
 
-                context.set_source_rgba(0.5, 0.5, 0.5, 1.0)
+                # context.set_source_rgba(0.5, 0.5, 0.5, 1.0)
+                # Raghav changed color from gray to white
+                context.set_source_rgba(1.0, 1.0, 1.0, 1.0)
                 context.rectangle(0, 0,
                     markerLength + pageBorder[0] * 2,
                     markerLength + pageBorder[1] * 2)
@@ -543,7 +551,9 @@ class MarkerPrinter:
             markerLength + pageBorder[1] * 2) as surface:
             context = cairo.Context(surface)
 
-            context.set_source_rgba(0.5, 0.5, 0.5, 1.0)
+            # context.set_source_rgba(0.5, 0.5, 0.5, 1.0)
+            # Raghav changed color from gray to white
+            context.set_source_rgba(1.0, 1.0, 1.0, 1.0)
             context.rectangle(0, 0,
                 markerLength + pageBorder[0] * 2,
                 markerLength + pageBorder[1] * 2)
@@ -630,7 +640,9 @@ class MarkerPrinter:
                 chessboardSize[1] * squareLength + pageBorder[1] * 2) as surface:
                 context = cairo.Context(surface)
 
-                context.set_source_rgba(0.5, 0.5, 0.5, 1.0)
+                # context.set_source_rgba(0.5, 0.5, 0.5, 1.0)
+                # Raghav changed color from gray to white
+                context.set_source_rgba(1.0, 1.0, 1.0, 1.0)
                 context.rectangle(0, 0,
                     chessboardSize[0] * squareLength + pageBorder[0] * 2,
                     chessboardSize[1] * squareLength + pageBorder[1] * 2)
@@ -687,7 +699,9 @@ class MarkerPrinter:
             chessboardSize[1] * squareLength + pageBorder[1] * 2) as surface:
             context = cairo.Context(surface)
 
-            context.set_source_rgba(0.5, 0.5, 0.5, 1.0)
+            # context.set_source_rgba(0.5, 0.5, 0.5, 1.0)
+            # Raghav changed color from gray to white
+            context.set_source_rgba(1.0, 1.0, 1.0, 1.0)
             context.rectangle(0, 0,
                 chessboardSize[0] * squareLength + pageBorder[0] * 2,
                 chessboardSize[1] * squareLength + pageBorder[1] * 2)
@@ -737,7 +751,9 @@ class MarkerPrinter:
                         subChessboardSliceY[subYID+1] - subChessboardSliceY[subYID] + pageBorder[1] * 2) as surface:
                         context = cairo.Context(surface)
 
-                        context.set_source_rgba(0.5, 0.5, 0.5, 1.0)
+                        # context.set_source_rgba(0.5, 0.5, 0.5, 1.0)
+                        # Raghav changed color from gray to white
+                        context.set_source_rgba(1.0, 1.0, 1.0, 1.0)
                         context.rectangle(0, 0,
                             subChessboardSliceX[subXID+1] - subChessboardSliceX[subXID] + pageBorder[0] * 2,
                             subChessboardSliceY[subYID+1] - subChessboardSliceY[subYID] + pageBorder[1] * 2)
@@ -783,10 +799,10 @@ class MarkerPrinter:
         if(MarkerPrinter.arucoDictBytesList[dictionary].shape[0] < (( sizeX * sizeY ) + firstMarker)):
             raise ValueError("aruce dictionary is not enough for your board size and firstMarker")
 
-        if(sizeX <= 1):
+        if(sizeX < 1):
             raise ValueError("sizeX <= 1")
 
-        if(sizeY <= 1):
+        if(sizeY < 1):
             raise ValueError("sizeY <= 1")
 
         if(markerLength <= 0):
@@ -819,6 +835,7 @@ class MarkerPrinter:
         markerLength = markerLength * MarkerPrinter.ptPerMeter
         markerSeparation = markerSeparation * MarkerPrinter.ptPerMeter
         pageBorder = (pageBorder[0] * MarkerPrinter.ptPerMeter, pageBorder[1] * MarkerPrinter.ptPerMeter)
+		# if tempfilename error install pycairo
 
         prevImage = None
         with tempfile.TemporaryDirectory() as tmpdirname:
@@ -828,7 +845,9 @@ class MarkerPrinter:
                 chessboardSize[1] * markerLength + (chessboardSize[1] - 1) * markerSeparation + pageBorder[1] * 2) as surface:
                 context = cairo.Context(surface)
 
-                context.set_source_rgba(0.5, 0.5, 0.5, 1.0)
+                # context.set_source_rgba(0.5, 0.5, 0.5, 1.0)
+                #Raghav changed color from gray to white
+                context.set_source_rgba(1.0, 1.0, 1.0, 1.0) 
                 context.rectangle(0, 0,
                     chessboardSize[0] * markerLength + (chessboardSize[0] - 1) * markerSeparation + pageBorder[0] * 2,
                     chessboardSize[1] * markerLength + (chessboardSize[1] - 1) * markerSeparation + pageBorder[1] * 2)
@@ -886,7 +905,9 @@ class MarkerPrinter:
             chessboardSize[1] * markerLength + (chessboardSize[1] - 1) * markerSeparation + pageBorder[1] * 2) as surface:
             context = cairo.Context(surface)
 
-            context.set_source_rgba(0.5, 0.5, 0.5, 1.0)
+            # context.set_source_rgba(0.5, 0.5, 0.5, 1.0)
+            # Raghav changed color from gray to white
+            context.set_source_rgba(1.0, 1.0, 1.0, 1.0)
             context.rectangle(0, 0,
                 chessboardSize[0] * markerLength + (chessboardSize[0] - 1) * markerSeparation + pageBorder[0] * 2,
                 chessboardSize[1] * markerLength + (chessboardSize[1] - 1) * markerSeparation + pageBorder[1] * 2)
@@ -940,7 +961,9 @@ class MarkerPrinter:
                         subChessboardSliceY[subYID+1] - subChessboardSliceY[subYID] + pageBorder[1] * 2) as surface:
                         context = cairo.Context(surface)
 
-                        context.set_source_rgba(0.5, 0.5, 0.5, 1.0)
+                        # context.set_source_rgba(0.5, 0.5, 0.5, 1.0)
+                        # Raghav changed color from gray to white
+                        context.set_source_rgba(1.0, 1.0, 1.0, 1.0)
                         context.rectangle(0, 0,
                             subChessboardSliceX[subXID+1] - subChessboardSliceX[subXID] + pageBorder[0] * 2,
                             subChessboardSliceY[subYID+1] - subChessboardSliceY[subYID] + pageBorder[1] * 2)
